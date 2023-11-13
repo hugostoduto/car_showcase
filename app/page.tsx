@@ -1,8 +1,11 @@
+
 import {Hero, SearchBar, CustomFilter} from '@/components/index';
 
 import {fetchCars} from '@/utils'
 export default async function Home() {
   const allCars = await fetchCars()
+  const isDataEmpty
+  
   return (
     <main className="overflow-hidden">
      <Hero/>
@@ -18,6 +21,7 @@ export default async function Home() {
           <CustomFilter title="year"/>
         </div>
       </div>
+      
      </div>
     </main>
   )
