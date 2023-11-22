@@ -3,7 +3,7 @@ import {Hero, SearchBar, CustomFilter, CarCard} from '@/components/index';
 
 import {fetchCars} from '@/utils'
 export default async function Home() {
-  const allCars = [{id:0, model:"s"},{id:1, model:"s"}]
+  const allCars =  await fetchCars()
   const isDataEmpty = !Array.isArray(allCars) || allCars.
   length < 1 || allCars[0].id
   
